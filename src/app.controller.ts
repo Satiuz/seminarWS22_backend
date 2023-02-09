@@ -23,7 +23,7 @@ export class AppController {
   async createEntry(@Body() createProductDto: CreateTodoDto): Promise<Todo> {
     return this.appService.create(createProductDto);
   }
-
+  
   @Get()
   async getList(): Promise<Todo[]> {
     return this.appService.findAll();
